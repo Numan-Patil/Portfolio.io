@@ -52,10 +52,10 @@ h1, h2 {
     width: 150px;
 }
 
-/* Hide Navbar on Mobile Devices */
-@media (max-width: 768px) {
+/* Hide Navbar completely on mobile devices (below 768px) */
+@media screen and (max-width: 768px) {
     .navbar {
-        display: none !important; /* Hide the navbar on mobile devices */
+        display: none !important; /* Forcefully hide navbar on mobile */
     }
 }
 
