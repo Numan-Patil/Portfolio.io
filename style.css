@@ -53,33 +53,10 @@ h1, h2 {
     width: 150px;
 }
 
-/* Mobile Responsive Navbar (Keep Horizontal Layout) */
+/* Hide Navbar on Mobile Devices */
 @media (max-width: 768px) {
     .navbar {
-        position: relative; /* Remove fixed positioning on mobile */
-        justify-content: space-between; /* Spread items across */
-        gap: 20px;
-        padding: 10px 20px;
-        flex-wrap: nowrap; /* Ensure horizontal layout */
-        margin: 0; /* Remove margin to prevent it from floating */
-    }
-
-    .nav-item {
-        font-size: 14px; /* Reduce font size on mobile */
-        padding: 8px 12px; /* Adjust padding for smaller screens */
-    }
-}
-
-/* Extra Small Devices (Mobile) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px 15px;
-        gap: 15px;
-    }
-
-    .nav-item {
-        font-size: 12px; /* Further reduce font size */
-        padding: 6px 10px; /* Adjust padding for very small screens */
+        display: none; /* Hide the navbar on mobile devices */
     }
 }
 
