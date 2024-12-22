@@ -55,10 +55,12 @@ h1, h2 {
 /* Mobile Responsive Navbar (Keep Horizontal Layout) */
 @media (max-width: 768px) {
     .navbar {
+        position: relative; /* Remove fixed positioning on mobile */
         justify-content: space-between; /* Spread items across */
         gap: 20px;
         padding: 10px 20px;
         flex-wrap: nowrap; /* Ensure horizontal layout */
+        margin: 0; /* Remove margin to prevent it from floating */
     }
 
     .nav-item {
@@ -79,7 +81,6 @@ h1, h2 {
         padding: 6px 10px; /* Adjust padding for very small screens */
     }
 }
-
 /* Sections */
 .section {
     padding: 100px 20px;
