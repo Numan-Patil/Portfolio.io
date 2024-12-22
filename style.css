@@ -55,6 +55,7 @@ h1, h2 {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        position: relative;
         gap: 10px;
         padding: 15px;
     }
@@ -74,6 +75,7 @@ h1, h2 {
 /* Extra Small Devices (Mobile) */
 @media (max-width: 480px) {
     .navbar {
+        position: relative;
         padding: 10px;
         gap: 5px;
     }
