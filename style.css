@@ -15,7 +15,6 @@ body {
 h1, h2 {
     font-family: 'Horizon', sans-serif;
 }
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -33,8 +32,10 @@ h1, h2 {
     transform: translateX(-50%);
     z-index: 10;
     transition: all 0.3s ease;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
+/* Navbar Items */
 .nav-item {
     padding: 10px 20px;
     border-radius: 50px;
@@ -57,17 +58,12 @@ h1, h2 {
         justify-content: space-between; /* Spread items across */
         gap: 20px;
         padding: 10px 20px;
+        flex-wrap: nowrap; /* Ensure horizontal layout */
     }
 
     .nav-item {
         font-size: 14px; /* Reduce font size on mobile */
         padding: 8px 12px; /* Adjust padding for smaller screens */
-    }
-
-    /* Adjust navbar width and reduce space for small screens */
-    .navbar {
-        width: 100%;
-        max-width: 100%;
     }
 }
 
