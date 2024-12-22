@@ -21,7 +21,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     gap: 70px;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: #43766C;
     border-radius: 50px;
     width: 100%;
