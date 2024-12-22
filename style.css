@@ -1,0 +1,338 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    background-color: #FFFFEC;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Horizon', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px;
+    background-color: #43766C;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #FFFFEC;
+    color: #222831;
+    width: 150px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        width: auto;
+        padding: 10px;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    scroll-margin-top: 120px; /* For smooth scrolling */
+    text-align: center;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 20px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    animation: fadeInScale 1.5s ease-in-out forwards;
+}
+
+.home-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #222831;
+}
+
+/* Bio Section */
+#bio {
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bio-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.bio-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    object-fit: cover;
+    border: 5px solid #D9EAFD;
+    animation: fadeInScale 1.5s ease-in-out forwards;
+}
+
+.bio-text-container {
+    flex: 2;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFEC;
+}
+
+.bio-text-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #D9EAFD;
+}
+
+.bio-text-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f0f8f7;
+    padding: 60px 20px;
+    color: #2c3e50;
+}
+
+#portfolio h1 {
+    font-family: 'Horizon', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #43766C;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #43766C;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Section Blocks */
+.section-block {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-block h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    border-left: 5px solid #43766C;
+    padding-left: 15px;
+    text-transform: capitalize;
+}
+
+.section-block p,
+.section-block ul,
+.section-block li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.section-block ul {
+    list-style-type: none; /* Removed bullets for uniformity */
+    padding-left: 0;
+    margin: 0;
+}
+
+.section-block li {
+    margin-bottom: 10px;
+}
+
+.section-block strong {
+    color: #43766C;
+    font-weight: bold;
+}
+
+/* Projects Section */
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.project-details {
+    flex: 2;
+}
+
+.project-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.project-screenshot {
+    flex: 1;
+    text-align: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Link Styles */
+.project-link {
+    text-decoration: none;
+    color: #43766C;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-link:hover {
+    color: #2C3E50;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #portfolio h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-container {
+        gap: 20px;
+    }
+
+    .section-block {
+        padding: 20px;
+    }
+
+    .section-block h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-block p,
+    .section-block ul,
+    .section-block li {
+        font-size: 1rem;
+    }
+
+}
+
+/* Contact Section */
+#contact {
+    background-color: #222831;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.contact-container p {
+    margin: 10px 0;
+}
+
+.contact-container a {
+    color: #43766C;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-container a:hover {
+    color: #007bff;
+}
+
+/* Keyframes for animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
